@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:4004/odata/v4
+
+# GET {{baseUrl}}/order-management/OrderItems
+# GET {{baseUrl}}/order-management/Orders?$expand=items
+# for different laguages
+# Accept-Language: fr
+# without this basic mock authorization, we will not be able to see the data
+# Authorization: Basic cbvsdhw
+
+# to create an order
+POST {{baseUrl}}/order-management/Orders
+Authorization: Basic cdweds
+Content-Type: application/json
+
+{
+    "orderID": "1234",
+    "customerID": "C-123",
+    "orderDate": "2023-03-05T14:00:00Z",
+    "TotalAmount": 100.00
+}

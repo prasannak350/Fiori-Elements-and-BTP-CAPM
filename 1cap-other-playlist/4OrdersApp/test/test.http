@@ -1,0 +1,22 @@
+# GET http://localhost:43737/odata/v4/catalog/OrderItems
+
+# Authorization
+# GET http://localhost:43737/odata/v4/restricted/Orders
+# Authorization: Basic ncdbjhew
+
+# post operation doesn't happen becuase we gave only read-only for this entity
+POST http://localhost:43737/odata/v4/catalog/Orders
+Content-Type: application/json
+
+{
+    "ID": "",
+    "orderDate": "2024-03-07",
+    "status": "Open",
+    "totalAmount": 100.00,
+    "createdBy":"UserF"
+}
+
+
+# search
+# GET http://localhost:43737/odata/v4/catalog/Orders?$search=Open
+# GET http://localhost:43737/odata/v4/catalog/Orders?$search=1
