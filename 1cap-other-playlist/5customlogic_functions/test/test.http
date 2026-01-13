@@ -1,0 +1,45 @@
+# CREATE order (valid case)
+
+# POST http://localhost:4004/api/customlogic/Order
+# Content-Type: application/json
+
+# {
+#     "totalAmount": 100.50
+# }
+
+# CREATE order (Invalid case)
+
+# POST http://localhost:4004/api/customlogic/Order
+# Content-Type: application/json
+
+# {
+#     "totalAmount": 0
+# }
+
+# READ oders
+
+# GET http://localhost:4004/api/customlogic/Order
+
+
+# functions
+
+# GET http://localhost:4004/api/customlogic/getStatus
+
+GET http://localhost:4004/api/customlogic/getOrders(quantity=3)
+
+
+# actions
+# POST http://localhost:4004/api/customlogic/PlaceBulkOrders
+# Content-Type: application/json
+
+# {
+#     "quantity": 3
+# }
+
+
+# POST http://localhost:4004/api/customlogic/CalculateDiscount
+# Content-Type: application/json
+
+# {
+#     "total": 150
+# }
