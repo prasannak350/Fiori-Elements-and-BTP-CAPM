@@ -1,0 +1,5 @@
+ID,title,prio,descr,miti_ID,impact,criticality,supplierID,createdAt,createdBy,modifiedAt,modifiedBy
+550e8400-e29b-41d4-a716-446655440001,Delay in raw material delivery,HIGH,Supplier may delay raw material delivery due to logistics issues,660e8400-e29b-41d4-a716-446655440101,8,4,1000001,2024-01-01T10:00:00Z,admin,2024-01-01T10:00:00Z,admin
+550e8400-e29b-41d4-a716-446655440002,Quality compliance risk,MEDIUM,Delivered materials may not meet quality standards,660e8400-e29b-41d4-a716-446655440102,6,3,1000002,2024-01-02T11:00:00Z,admin,2024-01-02T11:00:00Z,admin
+550e8400-e29b-41d4-a716-446655440003,Single source dependency,HIGH,Dependency on a single supplier can impact production,660e8400-e29b-41d4-a716-446655440103,9,5,1000003,2024-01-03T09:30:00Z,admin,2024-01-03T09:30:00Z,admin
+550e8400-e29b-41d4-a716-446655440004,Cost fluctuation risk,LOW,Unexpected increase in supplier pricing,660e8400-e29b-41d4-a716-446655440104,4,2,1000004,2024-01-04T14:15:00Z,admin,2024-01-04T14:15:00Z,admin
