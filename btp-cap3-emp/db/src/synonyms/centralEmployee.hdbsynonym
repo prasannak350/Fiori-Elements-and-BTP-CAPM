@@ -1,0 +1,8 @@
+{
+    "EMP_APP_CENTRALEMPLOYEES": {
+        "target": {
+            "object": "BTP_V.V_EMPLOYEES",
+            "schema": "BTP_DB_EMPLOYEE"
+        }
+    }
+}

@@ -1,0 +1,69 @@
+_schema-version: 3.3.0
+ID: btp-cap3-emp
+version: 1.0.0
+description: A simple CAP project.
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm ci
+        - npx cds build --production
+modules:
+  - name: btp-cap3-emp-srv
+    type: nodejs
+    path: gen/srv
+    parameters:
+      instances: 1
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: npm-ci
+    provides:
+      - name: srv-api
+        properties:
+          srv-url: '${default-url}'
+    requires:
+      - name: btp-cap3-emp-db
+      - name: btp-cap3-emp-auth
+  - name: btp-cap3-emp-db-deployer
+    type: hdb
+    path: gen/db
+    parameters:
+      buildpack: nodejs_buildpack
+    requires:
+      - name: btp-cap3-emp-db
+        properties:
+          TARGET_CONTAINER: '~{hdi-container-name}'
+      - name: cross-container-employee
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: employee-db
+          service: '~{the-service-name}'
+resources:
+  - name: btp-cap3-emp-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+    properties:
+      hdi-container-name: '${service-name}'
+  - name: btp-cap3-emp-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: 'btp-cap3-emp-${org}-${space}'
+        tenant-mode: dedicated
+        oauth2-configuration:
+          credential-types:
+            - binding-secret
+            - x509
+  - name: cross-container-employee
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service-name: hdi_BTP_DB_EMPLOYEE
+    properties:
+      the-service-name: '${service-name}'

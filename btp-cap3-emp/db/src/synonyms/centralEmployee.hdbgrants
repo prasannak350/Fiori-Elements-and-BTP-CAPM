@@ -1,0 +1,14 @@
+{
+    "employee-db": {
+        "object_owner": {
+            "container_roles":[
+                "BTP_DB_EMPLOYEE::Write#"
+            ]
+        },
+        "application_user": {
+            "container_roles":[
+                "BTP_DB_EMPLOYEE::Write"
+            ]
+        }
+    }
+}
