@@ -1,0 +1,19 @@
+_schema-version: "2.1"
+ID: btp-cap3-db-employee
+version: 0.0.1
+modules:
+- name: BTP_DB_EMPLOYEE_C
+  type: hdb
+  path: db
+  requires:
+  - name: hdi_BTP_DB_EMPLOYEE
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+resources:
+- name: hdi_BTP_DB_EMPLOYEE
+  type: com.sap.xs.hdi-container
+  parameters:
+    config:
+      schema: BTP_DB_EMPLOYEE
+  properties:
+    hdi-container-name: ${service-name}

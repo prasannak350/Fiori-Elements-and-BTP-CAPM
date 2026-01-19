@@ -1,0 +1,12 @@
+{
+    "role": {
+        "name": "BTP_DB_EMPLOYEE::Write",
+        "object_privileges": [
+            {
+                "name": "BTP_V.V_EMPLOYEES",
+                "type": "TABLE",
+                "privileges": ["INSERT", "UPDATE", "DELETE", "SELECT"]
+            }
+        ]
+    }
+}

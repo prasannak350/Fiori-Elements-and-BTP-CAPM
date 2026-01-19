@@ -1,0 +1,15 @@
+{
+    "role": {
+        "name": "BTP_DB_EMPLOYEE::Write#",
+        "object_privileges": [
+            {
+                "name": "BTP_V.V_EMPLOYEES",
+                "type": "TABLE",
+                "privileges_with_grant_option": ["INSERT", "UPDATE", "DELETE", "SELECT"]
+            }
+        ]
+    }
+}
+
+// my learnings 
+// For the granted role, # must be there at the end – “BTP_DB_EMPLOYEE::Write#”

@@ -1,0 +1,14 @@
+COLUMN TABLE "BTP_T.EMPLOYEES" (
+    ID NVARCHAR(36),
+    NAME NVARCHAR(255),
+    EMAIL_ID NVARCHAR(255),
+    DEPARTMENT NVARCHAR(30),
+    CREATEDAT TIMESTAMP,
+    CREATEDBY NVARCHAR(255),
+    MODIFIEDAT TIMESTAMP,
+    MODIFIEDBY NVARCHAR(255),
+    PRIMARY KEY(ID)
+);
+
+-- My learnings
+-- we should give only round braces not curly braces - if we give cyrly braces, syntax error will come
