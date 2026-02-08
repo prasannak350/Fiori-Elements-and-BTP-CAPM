@@ -1,0 +1,7 @@
+COLUMN TABLE btp_c_MediaFile (
+  ID NVARCHAR(36) NOT NULL,
+  content BLOB,
+  mediaType NVARCHAR(5000),
+  fileName NVARCHAR(5000),
+  PRIMARY KEY(ID)
+)

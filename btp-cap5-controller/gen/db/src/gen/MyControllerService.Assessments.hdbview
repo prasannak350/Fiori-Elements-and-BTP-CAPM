@@ -1,0 +1,11 @@
+VIEW MyControllerService_Assessments AS SELECT
+  Assessments_0.ID,
+  Assessments_0.AgendaId,
+  Assessments_0.Agenda,
+  Assessments_0.StartDate,
+  Assessments_0.EndDate,
+  Assessments_0.DueDate,
+  Assessments_0.DaysPlanned,
+  Assessments_0.IsObsolete,
+  Assessments_0.ReasonComment
+FROM btp_c_Assessments AS Assessments_0

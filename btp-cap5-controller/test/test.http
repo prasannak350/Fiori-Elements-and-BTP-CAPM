@@ -1,0 +1,33 @@
+# GET Metadata
+
+# GET http://localhost:4004/odata/v4/my-controller/$metadata
+
+# GET output data
+
+# GET http://localhost:4004/odata/v4/my-controller/OutputData
+
+
+# Media operation - using v4 service (both POST and PUT calls needed)
+# POST http://localhost:4004/odata/v4/my-controller/MediaFile
+# Content-Type: application/json
+
+# {
+#     "mediaType": "pdf",
+#     "fileName": "test.pdf"
+# }
+
+# update the media record posted with pdf content
+# PUT http://localhost:4004/odata/v4/my-controller/MediaFile(1d942bfe-833c-4e21-82f7-974044e3e828)/content
+# Content-Type: application/pdf
+
+# < ../srv/Test file.pdf
+
+
+# Media operation - using v2 service (using only POST call)
+# GET http://localhost:4004/v2/odata/v4/my-controller/$metadata
+
+POST http://localhost:4004/v2/odata/v4/my-controller/MediaFile
+slug: MyTestPDF.pdf
+Content-Type: application/pdf
+
+< ../srv/Test file.pdf

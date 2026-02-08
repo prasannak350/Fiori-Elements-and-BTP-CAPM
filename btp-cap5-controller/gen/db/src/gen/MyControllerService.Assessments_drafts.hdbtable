@@ -1,0 +1,16 @@
+COLUMN TABLE MyControllerService_Assessments_drafts (
+  ID NVARCHAR(36) NOT NULL,
+  AgendaId NVARCHAR(30) NULL,
+  Agenda NVARCHAR(50) NULL,
+  StartDate DATE NULL,
+  EndDate DATE NULL,
+  DueDate DATE NULL,
+  DaysPlanned INTEGER NULL,
+  IsObsolete BOOLEAN NULL,
+  ReasonComment NVARCHAR(50) NULL,
+  IsActiveEntity BOOLEAN,
+  HasActiveEntity BOOLEAN,
+  HasDraftEntity BOOLEAN,
+  DraftAdministrativeData_DraftUUID NVARCHAR(36) NOT NULL,
+  PRIMARY KEY(ID)
+)

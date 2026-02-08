@@ -1,0 +1,6 @@
+VIEW MyControllerService_MediaFile AS SELECT
+  MediaFile_0.ID,
+  MediaFile_0.content,
+  MediaFile_0.mediaType,
+  MediaFile_0.fileName
+FROM btp_c_MediaFile AS MediaFile_0

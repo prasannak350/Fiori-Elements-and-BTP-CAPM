@@ -1,0 +1,12 @@
+COLUMN TABLE btp_c_Assessments (
+  ID NVARCHAR(36) NOT NULL,
+  AgendaId NVARCHAR(30),
+  Agenda NVARCHAR(50),
+  StartDate DATE,
+  EndDate DATE,
+  DueDate DATE,
+  DaysPlanned INTEGER,
+  IsObsolete BOOLEAN,
+  ReasonComment NVARCHAR(50),
+  PRIMARY KEY(ID)
+)
