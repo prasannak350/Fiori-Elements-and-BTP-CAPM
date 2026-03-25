@@ -1,0 +1,8 @@
+VIEW AuthorizationService_AdminEntity AS SELECT
+  AdminEntity_0.ID,
+  AdminEntity_0.createdAt,
+  AdminEntity_0.createdBy,
+  AdminEntity_0.modifiedAt,
+  AdminEntity_0.modifiedBy,
+  AdminEntity_0.Name
+FROM btp_a_AdminEntity AS AdminEntity_0

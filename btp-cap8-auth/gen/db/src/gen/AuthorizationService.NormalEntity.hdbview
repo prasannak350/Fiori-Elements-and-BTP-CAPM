@@ -1,0 +1,8 @@
+VIEW AuthorizationService_NormalEntity AS SELECT
+  NormalEntity_0.ID,
+  NormalEntity_0.createdAt,
+  NormalEntity_0.createdBy,
+  NormalEntity_0.modifiedAt,
+  NormalEntity_0.modifiedBy,
+  NormalEntity_0.Name
+FROM btp_a_NormalEntity AS NormalEntity_0
