@@ -1,0 +1,9 @@
+VIEW ConsumptionService_Orders AS SELECT
+  ORDERS_0.ID,
+  ORDERS_0.createdAt,
+  ORDERS_0.createdBy,
+  ORDERS_0.modifiedAt,
+  ORDERS_0.modifiedBy,
+  ORDERS_0.DESCRIPTION,
+  ORDERS_0.SUPPLIER_ID
+FROM btp_bp_ORDERS AS ORDERS_0
