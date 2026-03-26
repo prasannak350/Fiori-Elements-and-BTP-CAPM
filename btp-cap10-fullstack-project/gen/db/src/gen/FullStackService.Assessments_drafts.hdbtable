@@ -1,0 +1,16 @@
+COLUMN TABLE FullStackService_Assessments_drafts (
+  ID NVARCHAR(36) NOT NULL,
+  createdAt TIMESTAMP NULL,
+  createdBy NVARCHAR(255) NULL,
+  modifiedAt TIMESTAMP NULL,
+  modifiedBy NVARCHAR(255) NULL,
+  DESCRIPTION NVARCHAR(255) NULL,
+  START_DATE DATE NULL,
+  END_DATE DATE NULL,
+  CATEGORY NVARCHAR(50) NULL,
+  IsActiveEntity BOOLEAN,
+  HasActiveEntity BOOLEAN,
+  HasDraftEntity BOOLEAN,
+  DraftAdministrativeData_DraftUUID NVARCHAR(36) NOT NULL,
+  PRIMARY KEY(ID)
+)

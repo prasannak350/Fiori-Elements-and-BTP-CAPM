@@ -1,0 +1,1 @@
+using FullStackService as service from '../../srv/fullstack-service';

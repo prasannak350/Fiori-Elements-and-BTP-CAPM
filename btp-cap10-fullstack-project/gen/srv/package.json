@@ -1,0 +1,42 @@
+{
+  "name": "btp-cap10-fullstack-project",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@cap-js/hana": "^2",
+    "@sap/cds": "^9",
+    "@sap/hana-client": "^2.27.24",
+    "@sap/xssec": "^4.12.2",
+    "express": "^4",
+    "hdb": "^2.27.1",
+    "passport": "^0.7.0"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9",
+    "rimraf": "^5.0.5",
+    "mbt": "^1.2.29"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-btp_ui_assessments": "cds watch --open btpuiassessments/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "undeploy": "cf undeploy btp-cap10-fullstack-project --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+  },
+  "private": true,
+  "cds": {
+    "requires": {
+      "db": "hana"
+    },
+    "uaa": {
+      "kind": "xsuaa"
+    }
+  },
+  "sapux": [
+    "app/btp_ui_assessments"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}
