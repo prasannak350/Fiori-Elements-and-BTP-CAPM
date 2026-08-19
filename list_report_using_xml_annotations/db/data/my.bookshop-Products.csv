@@ -1,0 +1,16 @@
+ID,productName,category,description,price,currency,stock,status,createdAt,createdBy,modifiedAt,modifiedBy
+11111111-1111-1111-1111-111111111111,Laptop Pro,Electronics,Professional laptop,1200.00,USD,25,Available,2026-08-01T09:00:00Z,admin,2026-08-10T10:30:00Z,admin
+22222222-2222-2222-2222-222222222222,Wireless Mouse,Accessories,Wireless optical mouse,45.00,USD,100,Available,2026-08-02T09:15:00Z,admin,2026-08-11T11:00:00Z,admin
+33333333-3333-3333-3333-333333333333,Mechanical Keyboard,Accessories,Mechanical RGB keyboard,120.00,USD,50,Available,2026-08-03T10:00:00Z,admin,2026-08-12T12:15:00Z,admin
+44444444-4444-4444-4444-444444444444,4K Monitor,Electronics,27 inch 4K monitor,450.00,USD,15,Limited,2026-08-04T08:30:00Z,admin,2026-08-13T09:45:00Z,admin
+55555555-5555-5555-5555-555555555555,USB-C Hub,Accessories,Multi-port USB-C hub,75.00,USD,0,Out of Stock,2026-08-05T11:20:00Z,admin,2026-08-14T14:00:00Z,admin
+66666666-6666-6666-6666-666666666666,Webcam HD,Electronics,Full HD USB webcam,85.00,USD,35,Available,2026-08-06T09:45:00Z,admin,2026-08-15T10:20:00Z,admin
+77777777-7777-7777-7777-777777777777,Desk Lamp,Office,LED adjustable desk lamp,35.00,USD,60,Available,2026-08-07T10:10:00Z,admin,2026-08-15T11:30:00Z,admin
+88888888-8888-8888-8888-888888888888,Office Chair,Furniture,Ergonomic office chair,250.00,USD,12,Limited,2026-08-08T08:50:00Z,admin,2026-08-16T09:10:00Z,admin
+99999999-9999-9999-9999-999999999999,USB-C Cable,Accessories,High-speed USB-C charging cable,15.00,USD,200,Available,2026-08-09T12:00:00Z,admin,2026-08-16T10:00:00Z,admin
+aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa,External SSD,Electronics,1TB portable SSD,140.00,USD,20,Available,2026-08-10T09:30:00Z,admin,2026-08-16T11:00:00Z,admin
+bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb,Bluetooth Speaker,Electronics,Portable Bluetooth speaker,65.00,USD,45,Available,2026-08-11T10:45:00Z,admin,2026-08-16T12:00:00Z,admin
+cccccccc-cccc-cccc-cccc-cccccccccccc,Notebook,Office,Hardcover office notebook,12.00,USD,150,Available,2026-08-12T08:15:00Z,admin,2026-08-17T09:00:00Z,admin
+dddddddd-dddd-dddd-dddd-dddddddddddd,Wireless Headset,Accessories,Noise cancelling wireless headset,180.00,USD,8,Limited,2026-08-13T11:30:00Z,admin,2026-08-17T10:00:00Z,admin
+eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee,Smartphone Stand,Accessories,Adjustable smartphone desk stand,25.00,USD,75,Available,2026-08-14T09:00:00Z,admin,2026-08-17T11:00:00Z,admin
+ffffffff-ffff-ffff-ffff-ffffffffffff,Monitor Stand,Furniture,Adjustable monitor stand,90.00,USD,10,Limited,2026-08-15T10:30:00Z,admin,2026-08-17T12:00:00Z,admin
