@@ -1,0 +1,5 @@
+ID,name,stock,price,criticality,productUrl
+201,Laptop,5,899.00,2
+202,Monitor,2,199.00,1
+203,Keyboard,50,29.00,3
+

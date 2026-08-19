@@ -1,0 +1,216 @@
+{
+  "_version": "1.86.0",
+  "sap.app": {
+    "id": "com.sap.overviewui",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:ovp",
+      "version": "1.30.0",
+      "toolsId": "7c788cca-e803-4465-bd65-71558b2d6429"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/sales/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    },
+    "crossNavigation": {
+      "outbounds": {
+        "ProductDisplay": {
+          "semanticObject": "Product",
+          "action": "display"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.151.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.fe.templates": {},
+        "sap.ovp": {},
+        "sap.ui.rta": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.sap.overviewui.i18n.i18n"
+        }
+      },
+      "mainModel": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [],
+      "targets": {}
+    }
+  },
+  "sap.ovp": {
+    "globalFilterModel": "mainModel",
+    "globalFilterEntitySet": "Products",
+    "containerLayout": "resizable",
+    "enableLiveFilter": true,
+    "considerAnalyticalParameters": false,
+    "cards": {
+      "recentOrders": {
+        "template": "sap.ovp.cards.v4.table",
+        "model": "mainModel",
+        "settings": {
+          "entitySet": "Orders",
+          "title": "Recent Orders",
+          "sortBy": "orderDate",
+          "sortOrder": "descending",
+          "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#orders",
+          "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#OpenOrders"
+        }
+      },
+      "productsTable": {
+        "template": "sap.ovp.cards.v4.table",
+        "model": "mainModel",
+        "settings": {
+          "entitySet": "Products",
+          "title": "Products Table",
+          "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#productsTable",
+          "presentationAnnotationPath":"com.sap.vocabularies.UI.v1.PresentationVariant#Expensive",
+          "identificationAnnotationPath":"com.sap.vocabularies.UI.v1.Identification#Navigate"
+        }
+      },
+      "lowStockProducts": {
+        "template": "sap.ovp.cards.v4.table",
+        "model": "mainModel",
+        "settings": {
+          "entitySet": "LowStockProducts",
+          "title": "Low Stock Products",
+          "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#lowStock"
+        }
+      },
+      "productsList": {
+        "template": "sap.ovp.cards.v4.list",
+        "model": "mainModel",
+        "settings": {
+          "title": "Products List",
+          "entitySet": "Products",
+          "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#productList"
+        }
+      },
+      "expensiveProducts": {
+        "template": "sap.ovp.cards.v4.table",
+        "model": "mainModel",
+        "settings": {
+          "entitySet": "ExpensiveProducts",
+          "title": "Expensive Products",
+          "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#expensive"
+        }
+      },
+      "completedOrders": {
+          "template": "sap.ovp.cards.v4.table",
+          "model": "mainModel",
+          "settings": {
+            "entitySet": "CompletedOrders",
+            "title": "Completed Orders",
+            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#completedOrders"
+          }
+      },
+      "revenueAnalysis": {
+        "template": "sap.ovp.cards.v4.charts.analytical",
+        "model": "mainModel",
+        "settings": {
+          "entitySet": "RevenueByStatus",
+          "title": "Revenue by Status",
+          "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#RevenueChart",
+          "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#RevenueKPI"
+        }
+      },
+      "quickLinks": {
+        "template": "sap.ovp.cards.v4.linklist",
+        "model": "mainModel",
+        "settings": {
+          "title": "Useful Links",
+          "listFlavor": "standard",
+          "staticContent": [
+            {
+              "title": "SAP",
+              "subTitle": "SAP official website",
+              "targetUri": "https://www.sap.com",
+              "openInNewWindow": true
+            },
+            {
+              "title": "SAPUI5",
+              "subTitle": "SAPUI5 documentation",
+              "targetUri": "https://ui5.sap.com",
+              "openInNewWindow": true
+            },
+            {
+              "title": "CAP",
+              "subTitle": "CAP documentation",
+              "targetUri": "https://cap.cloud.sap",
+              "openInNewWindow": true
+            }
+          ]
+        }
+      }
+    },
+    "globalFilterControlType": "MacroFilterBar"
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "analytical"
+  },
+  "sap.fe": {
+    "app": {
+      "enableLazyLoading": true
+    }
+  }
+}

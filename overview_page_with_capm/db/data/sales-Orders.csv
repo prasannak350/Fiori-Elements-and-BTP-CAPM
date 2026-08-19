@@ -1,0 +1,8 @@
+ID,customer,status,orderDate,total
+101,Acme Corp,open,2026-08-01,4500.00
+102,Globex Inc,shipped,2026-08-03,1200.00
+103,Initech,completed,2026-08-05,7800.00
+104,Umbrella Ltd,cancelled,2026-08-06,300.00
+105,John,open,2026-08-02,500.00
+106,Bob,open,2026-08-01,300.00
+107,Alice,completed,2026-08-06,900.00

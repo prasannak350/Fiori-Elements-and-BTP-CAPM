@@ -1,0 +1,25 @@
+{
+  "name": "overview_page_with_capm",
+  "version": "1.0.0",
+  "dependencies": {
+    "@sap/cds": "^10.0.5",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2.4",
+    "cds-plugin-ui5": "^0.17.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-overviewui": "cds watch --open com.sap.overviewui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-listreportui": "cds watch --open com.sap.listreportui/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/overviewui",
+    "app/listreportui"
+  ]
+}
