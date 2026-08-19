@@ -1,0 +1,6 @@
+ID,name,description,price,currency,stock,status_code,statusCriticality,createdAt
+1,Laptop Pro 15,High performance laptop,1200.00,USD,25,L,2,2026-01-10T10:00:00Z
+2,Wireless Mouse,Ergonomic wireless mouse,25.50,USD,4,L,2,2026-01-12T09:00:00Z
+3,Office Chair,Ergonomic office chair,150.00,USD,0,O,1,2026-02-01T11:00:00Z
+4,USB-C Hub,7-in-1 USB-C hub,45.00,USD,60,A,3,2026-02-15T14:30:00Z
+5,Monitor 27in,4K UHD monitor,320.00,USD,12,L,2,2026-03-01T08:15:00Z
