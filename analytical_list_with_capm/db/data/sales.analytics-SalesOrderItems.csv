@@ -1,0 +1,5 @@
+ID;orderDate;product_ID;customer_ID;region_ID;quantity;revenue;discount;createdAt;createdBy;modifiedAt;modifiedBy
+3c9e1a10-1111-4a1a-9a11-000000000001;2026-01-05;1;1;1;10;12000.00;5.0;2026-01-05T09:00:00Z;pkondreddy@gmail.com;2026-01-05T09:00:00Z;pkondreddy@gmail.com
+3c9e1a10-1111-4a1a-9a11-000000000002;2026-02-10;2;2;2;25;3750.00;2.0;2026-02-10T10:30:00Z;pkondreddy@gmail.com;2026-02-10T10:30:00Z;pkondreddy@gmail.com
+3c9e1a10-1111-4a1a-9a11-000000000003;2026-03-15;3;3;3;15;9000.00;3.5;2026-03-15T14:15:00Z;pkondreddy@gmail.com;2026-03-15T14:15:00Z;pkondreddy@gmail.com
+3c9e1a10-1111-4a1a-9a11-000000000004;2026-04-01;1;2;2;8;9600.00;0.0;2026-04-01T11:45:00Z;pkondreddy@gmail.com;2026-04-01T11:45:00Z;pkondreddy@gmail.com
