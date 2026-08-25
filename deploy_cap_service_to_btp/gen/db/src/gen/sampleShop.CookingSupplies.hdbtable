@@ -1,0 +1,10 @@
+COLUMN TABLE sampleShop_CookingSupplies (
+  ID NVARCHAR(36) NOT NULL,
+  name NVARCHAR(5000),
+  price DECIMAL(8, 2),
+  amount INTEGER,
+  color NVARCHAR(5000),
+  material NVARCHAR(5000),
+  creator NVARCHAR(5000),
+  PRIMARY KEY(ID)
+)

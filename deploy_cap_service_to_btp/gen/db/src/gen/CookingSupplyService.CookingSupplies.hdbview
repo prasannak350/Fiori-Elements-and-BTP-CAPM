@@ -1,0 +1,9 @@
+VIEW CookingSupplyService_CookingSupplies AS SELECT
+  CookingSupplies_0.ID,
+  CookingSupplies_0.name,
+  CookingSupplies_0.price,
+  CookingSupplies_0.amount,
+  CookingSupplies_0.color,
+  CookingSupplies_0.material,
+  CookingSupplies_0.creator
+FROM sampleShop_CookingSupplies AS CookingSupplies_0
