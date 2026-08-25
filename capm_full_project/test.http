@@ -1,0 +1,27 @@
+GET http://localhost:4013/odata/v4/book-store/$metadata
+
+# IF we separate each request with Hashes(###) then we get send request option for each of them separately
+###
+GET http://localhost:4013/odata/v4/book-store/Chapters
+
+###
+GET http://localhost:4013/odata/v4/book-store/Books
+Authorization: Basic YWxpY2U6MTIz
+
+###
+GET http://localhost:4013/odata/v4/book-store/Books?$count=true
+Authorization: Basic YWxpY2U6MTIz
+
+###
+GET http://localhost:4013/odata/v4/book-store/Books?$filter=(status_code eq 'A')
+Authorization: Basic YWxpY2U6MTIz
+
+###
+POST http://localhost:4013/odata/v4/book-store/Books
+Authorization: Basic YWxpY2U6MTIz
+Content-Type: application/json
+
+{
+    "ID": "7f2b1c30-2222-4b2c-9d3e-200000000019",
+    "title": "New Book"
+}

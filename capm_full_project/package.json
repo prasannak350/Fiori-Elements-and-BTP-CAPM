@@ -1,0 +1,58 @@
+{
+  "name": "capm_full_project",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@cap-js/attachments": "^4.0.0",
+    "@sap/cds": "^10"
+  },
+  "devDependencies": {
+    "@cap-js/cds-typer": "^0.40.2",
+    "@cap-js/sqlite": "^3",
+    "cds-plugin-ui5": "^0.17.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-bookstore-listview": "cds watch --open com.sap.bookstorelistview/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-authors-listview": "cds watch --open com.sap.authorslistview/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/bookstore-listview",
+    "app/authors-listview"
+  ],
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
+      },
+      "auth": {
+        "kind": "mocked",
+        "users": {
+          "alice": {
+            "password": "123",
+            "roles": [
+              "admin"
+            ]
+          },
+          "bob": {
+            "password": "321",
+            "roles": [
+              "user-for-actions",
+              "only-read-access"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
